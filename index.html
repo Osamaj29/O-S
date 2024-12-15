@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .hero {
+            position: relative;
+            height: 300px;
+            background: url('background.png') center/cover no-repeat;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 2.1rem;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .hero img {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+        }
+        .hero button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #1a5794;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hero button:hover {
+            background-color: #007bff;
+        }
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+        .contact-box {
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            border: 1px solid #dccccc;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #f0f8ff;
+        }
+        .contact-box img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        .contact-box button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-box button:hover {
+            background-color: #0056b3;
+        }
+        .hidden-content {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #216cb8;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+        footer p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: rgb(4, 4, 4);
+            font-weight: bold; /* Make the text bold */
+        }
+        footer nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        footer nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleContent(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <section class="hero">
+        <img src="me1.png" alt="Profile Image" />
+        <button onclick="window.location.href='about-us.html'">About Me</button>
+        <h1>WELCOME TO OSAMA PAGE</h1>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-box contact-us">
+            <img src="con1.png" alt="Contact Us Icon" />
+            <h3>Contact Me</h3>
+            <button onclick="toggleContent('contactDetails')">View</button>
+            <div id="contactDetails" class="hidden-content">
+                <p>Phone: +601128650802</p>
+                <p>Phone: +966563747097</p>
+            </div>
+        </div>
+
+        <div class="contact-box email">
+            <img src="em.png" alt="Email Icon" />
+            <h3>Email</h3>
+            <button onclick="toggleContent('emailDetails')">View</button>
+            <div id="emailDetails" class="hidden-content">
+                <p>Email: <a href="mailto:osama0557562398@gmail.com">osama0557562398@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="contact-box snapchat">
+            <img src="sna.png" alt="Snapchat Icon" />
+            <h3>Snapchat</h3>
+            <button onclick="window.open('https://www.snapchat.com/add/Os_j29', '_blank')">Open</button>
+        </div>
+
+        <div class="contact-box instagram">
+            <img src="in.png" alt="Instagram Icon" />
+            <h3>Instagram</h3>
+            <button onclick="window.open('https://www.instagram.com/sooma_j29', '_blank')">Open</button>
+        </div>
+
+        <div class="contact-box tiktok">
+            <img src="tik.png" alt="TikTok Icon" />
+            <h3>TikTok</h3>
+            <button onclick="window.open('https://www.tiktok.com/@Os_j29', '_blank')">Open</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Osama Abdulghani 2024 ©</p>
+        <nav>
+        </nav>
+    </footer>
+</body>
+</html> 
+ 
